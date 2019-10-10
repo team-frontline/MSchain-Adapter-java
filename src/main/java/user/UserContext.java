@@ -6,7 +6,7 @@ import org.hyperledger.fabric.sdk.User;
 import java.io.Serializable;
 import java.util.Set;
 
-public class RegisterEnrollUser implements User, Serializable {
+public class UserContext implements User, Serializable {
 
     protected String name;
     protected Set<String> roles;
