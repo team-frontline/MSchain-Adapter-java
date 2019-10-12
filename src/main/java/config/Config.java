@@ -10,13 +10,15 @@ public class Config {
 
     public static final String ADMIN = "admin";
 
+    public static final String BASE_PATH = "/home/supimi/poc/MSchain-Adapter-java/src/network_resources";
+
     public static final String ORDERER_URL = "grpc://localhost:7050";
 
     public static final String ORDERER_NAME = "orderer.example.com";
 
-    public static final String CHANNEL_CONFIG_PATH = "config/channel.tx";
+    public static final String CHANNEL_CONFIG_PATH = BASE_PATH + File.separator + "config/channel.tx";
 
-    public static final String CHANNEL_NAME = "MSchannel";
+    public static final String CHANNEL_NAME = "mychannel";
 
     public static final String ORG1_PEER_0 = "peer0.org1.example.com";
 
@@ -34,20 +36,21 @@ public class Config {
 
     public static final String ORG2_PEER_1_URL = "grpc://localhost:8056";
 
-    public static final String ORG1_ADMIN_PK_PATH =  "crypto-config" + File.separator + "peerOrganizations" + File.separator
+
+    public static final String ORG1_ADMIN_PK_PATH = BASE_PATH + File.separator + "crypto-config" + File.separator + "peerOrganizations" + File.separator
             + "org1.example.com" + File.separator + "users" + File.separator + "Admin@org1.example.com"
-            + File.separator + "msp"+ File.separator + "keystore";
+            + File.separator + "msp" + File.separator + "keystore";
 
-    public static final String ORG1_ADMIN_CERT_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
+    public static final String ORG1_ADMIN_CERT_PATH = BASE_PATH + File.separator + "crypto-config" + File.separator + "peerOrganizations" + File.separator
             + "org1.example.com" + File.separator + "users" + File.separator + "Admin@org1.example.com"
-            + File.separator + "msp"+ File.separator + "certificates";
+            + File.separator + "msp" + File.separator + "admincerts";
 
-    public static final String ORG2_ADMIN_PK_PATH =  "crypto-config" + File.separator + "peerOrganizations" + File.separator
+    public static final String ORG2_ADMIN_PK_PATH = BASE_PATH + File.separator + "crypto-config" + File.separator + "peerOrganizations" + File.separator
             + "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
-            + File.separator + "msp"+ File.separator + "keystore";
+            + File.separator + "msp" + File.separator + "keystore";
 
-    public static final String ORG2_ADMIN_CERT_PATH = "crypto-config" + File.separator + "peerOrganizations" + File.separator
+    public static final String ORG2_ADMIN_CERT_PATH = BASE_PATH + File.separator + "crypto-config" + File.separator + "peerOrganizations" + File.separator
             + "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
-            + File.separator + "msp"+ File.separator + "certificates";
+            + File.separator + "msp" + File.separator + "admincerts";
 
 }
