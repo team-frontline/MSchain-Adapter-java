@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1fe12ff-1683-423a-b140-ca393be2a2e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/CAClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/CAClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/client/ChannelClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ChannelClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
