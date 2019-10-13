@@ -64,7 +64,7 @@ public class CreateChannel {
             msChannel.initialize();
 
             fabricClient.getInstance().setUserContext(admin_org2);
-            msChannel = fabricClient.getInstance().getChannel("MSchannel");
+            msChannel = fabricClient.getInstance().getChannel("mychannel");
             msChannel.joinPeer(peer0_org2);
             msChannel.joinPeer(peer1_org2);
 
