@@ -53,4 +53,12 @@ public class Config {
             + "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
             + File.separator + "msp" + File.separator + "admincerts";
 
+    public static final String CHAINCODE_ROOT_DIR = "chaincode";
+
+    public static final String CHAINCODE_NAME = "fabcar";
+
+    public static final String CHAINCODE_PATH = "github.com/fabcar";
+
+    public static final String CHAINCODE_VERSION = "1";
+
 }
