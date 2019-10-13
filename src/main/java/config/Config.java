@@ -50,4 +50,9 @@ public class Config {
             + "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
             + File.separator + "msp"+ File.separator + "certificates";
 
+    public static final String CA_ORG1_URL ="";
+
+    public static final String ORG1 = "";
+    public static final String ADMIN_PASSWORD = "";
+    public static final String CHAINCODE_1_NAME = "";
 }

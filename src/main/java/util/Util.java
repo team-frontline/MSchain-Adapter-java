@@ -1,6 +1,7 @@
 package util;
 
 import user.CAEnrollment;
+import user.UserContext;
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.*;
@@ -67,5 +68,40 @@ public class Util {
         }
         CAEnrollment caEnrollment = new CAEnrollment(key, certificate);
         return caEnrollment;
+    }
+
+    public static UserContext readUserContext(String affiliation, String username) throws Exception {
+        String filePath = "users/" + affiliation + "/" + username + ".ser";
+        File file = new File(filePath);
+        if (file.exists()) {
+            // Reading the object from a file
+            FileInputStream fileStream = new FileInputStream(filePath);
+            ObjectInputStream inputStream = new ObjectInputStream(fileStream);
+
+            // Method for deserialization of object
+            UserContext uContext = (UserContext) inputStream.readObject();
+
+            inputStream.close();
+            fileStream.close();
+            return uContext;
+        }
+        return null;
+    }
+
+    public static void writeUserContext(UserContext userContext) throws IOException {
+        String directoryPath = "users/" + userContext.getAffiliation();
+        String filePath = directoryPath + "/" + userContext.getName() + ".ser";
+        File directory = new File(directoryPath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        FileOutputStream file = new FileOutputStream(filePath);
+        ObjectOutputStream outputStream = new ObjectOutputStream(file);
+
+        // Method for serialization of object
+        outputStream.writeObject(userContext);
+
+        outputStream.close();
+        file.close();
     }
 }

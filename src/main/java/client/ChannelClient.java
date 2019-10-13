@@ -1,1 +1,1 @@
-package client;public class ChannelClient {}
+package client;import org.hyperledger.fabric.sdk.Channel;public class ChannelClient {    public Channel getChannel() {    }}
