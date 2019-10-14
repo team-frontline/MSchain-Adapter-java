@@ -43,30 +43,31 @@ public class DeployInstantiateChaincode {
             admin_org2.setMspId(Config.ORG2_MSP);
             admin_org2.setName(Config.ADMIN);
 
-            //new client as org1 adimin as the user
+            //new client as org1 admin as the user
             FabricClient fabricClient = new FabricClient(admin_org1);
+            //fabricClient.getInstance()
 
-            Channel msChaneel = fabricClient.getInstance().newChannel(Config.CHANNEL_NAME);
+            Channel msChannel = fabricClient.getInstance().newChannel(Config.CHANNEL_NAME);
             Orderer orderer = fabricClient.getInstance().newOrderer(Config.ORDERER_NAME, Config.ORDERER_URL);
             Peer peer0_org1 = fabricClient.getInstance().newPeer(Config.ORG1_PEER_0, Config.ORG1_PEER_0_URL);
             Peer peer1_org1 = fabricClient.getInstance().newPeer(Config.ORG1_PEER_1, Config.ORG1_PEER_1_URL);
             Peer peer0_org2 = fabricClient.getInstance().newPeer(Config.ORG2_PEER_0, Config.ORG2_PEER_0_URL);
             Peer peer1_org2 = fabricClient.getInstance().newPeer(Config.ORG2_PEER_1, Config.ORG2_PEER_1_URL);
 
-            msChaneel.addOrderer(orderer);
-            msChaneel.addPeer(peer0_org1);
-            msChaneel.addPeer(peer1_org1);
-            msChaneel.addPeer(peer0_org2);
-            msChaneel.addPeer(peer1_org2);
-            msChaneel.initialize();
+            msChannel.addOrderer(orderer);
+            msChannel.addPeer(peer0_org1);
+            msChannel.addPeer(peer1_org1);
+            msChannel.addPeer(peer0_org2);
+            msChannel.addPeer(peer1_org2);
+            msChannel.initialize();
 
             List<Peer> peersOrg1 = new ArrayList<>();
             peersOrg1.add(peer0_org1);
             peersOrg1.add(peer1_org1);
 
             List<Peer> peersOrg2 = new ArrayList<>();
-            peersOrg1.add(peer0_org2);
-            peersOrg1.add(peer1_org2);
+            peersOrg2.add(peer0_org2);
+            peersOrg2.add(peer1_org2);
 
             Collection<ProposalResponse> responses = fabricClient.deployChaincode(Config.CHAINCODE_NAME,
                     Config.CHAINCODE_PATH, Config.CHAINCODE_ROOT_DIR, Type.GO_LANG.toString(), Config.CHAINCODE_VERSION,
