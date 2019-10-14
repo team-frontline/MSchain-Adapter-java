@@ -10,6 +10,8 @@ public class Config {
 
     public static final String ADMIN = "admin";
 
+    public static final String ADMIN_PASSWORD = "adminpw";
+
     public static final String BASE_PATH = "/home/supimi/poc/MSchain-Adapter-java/src/network_resources";
 
     public static final String ORDERER_URL = "grpc://localhost:7050";
@@ -53,17 +55,16 @@ public class Config {
             + "org2.example.com" + File.separator + "users" + File.separator + "Admin@org2.example.com"
             + File.separator + "msp" + File.separator + "admincerts";
 
-    public static final String CHAINCODE_ROOT_DIR = "chaincode";
+    public static final String CHAINCODE_ROOT_DIR = BASE_PATH + File.separator + "chaincode";
 
-    public static final String CHAINCODE_NAME = "fabcar";
+    public static final String CHAINCODE_NAME = "ctb";
 
-    public static final String CHAINCODE_PATH = "github.com/fabcar";
+    public static final String CHAINCODE_PATH = "github.com/ctb";
 
     public static final String CHAINCODE_VERSION = "1";
 
-    public static final String CA_ORG1_URL ="";
+    public static final String CA_ORG1_URL = "http://localhost:7054";
 
-    public static final String ORG1 = "";
-    public static final String ADMIN_PASSWORD = "";
-    public static final String CHAINCODE_1_NAME = "";
+    public static final String ORG1 = "org1";
+
 }
