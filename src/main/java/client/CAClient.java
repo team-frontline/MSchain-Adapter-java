@@ -1,10 +1,15 @@
 package client;
 
 import org.hyperledger.fabric.sdk.Enrollment;
+import org.hyperledger.fabric.sdk.exception.CryptoException;
+import org.hyperledger.fabric.sdk.exception.InvalidArgumentException;
+import org.hyperledger.fabric.sdk.security.CryptoSuite;
 import org.hyperledger.fabric_ca.sdk.HFCAClient;
 import user.UserContext;
 import util.Util;
 
+import java.lang.reflect.InvocationTargetException;
+import java.net.MalformedURLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +23,14 @@ public class CAClient {
     public CAClient(){}
 
     //should modify
-    public CAClient(String caUrl, Object o) {
+    public CAClient(String caUrl, Properties properties) {
+        this.caUrl = caUrl;
+        this.caProperties = properties;
+        try {
+            this.init();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public String getCaUrl() {
@@ -51,6 +63,12 @@ public class CAClient {
 
     public void setAdminContext(UserContext adminContext) {
         this.adminContext = adminContext;
+    }
+
+    public void init() throws MalformedURLException, IllegalAccessException, InstantiationException, ClassNotFoundException, CryptoException, InvalidArgumentException, NoSuchMethodException, InvocationTargetException, org.hyperledger.fabric_ca.sdk.exception.InvalidArgumentException {
+        CryptoSuite cryptoSuite = CryptoSuite.Factory.getCryptoSuite();
+        hfcaClient = HFCAClient.createNewInstance(caUrl, caProperties);
+        hfcaClient.setCryptoSuite(cryptoSuite);
     }
 
     public UserContext enrollAdminUser(String username, String password) throws Exception{
