@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1fe12ff-1683-423a-b140-ca393be2a2e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/network/CreateChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/network/CreateChannel.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/FabricClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/FabricClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/target/classes/chaincode/InvokeChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chaincode/InvokeChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/CAClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/CAClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/ChannelClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/ChannelClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/FabricClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/FabricClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/network/DeployInstantiateChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/network/DeployInstantiateChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Util.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DeployInstantiateChaincode">
     <configuration name="CreateChannel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="network.CreateChannel" />
       <module name="MSchain-Adapter-java" />
@@ -84,8 +86,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeployInstantiateChaincode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="network.DeployInstantiateChaincode" />
+      <module name="MSchain-Adapter-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="network.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeployInstantiateChaincode" />
         <item itemvalue="Application.CreateChannel" />
       </list>
     </recent_temporary>
@@ -103,11 +119,8 @@
       <workItem from="1570620723302" duration="994000" />
       <workItem from="1570695256070" duration="2941000" />
       <workItem from="1570773294657" duration="8854000" />
-<<<<<<< Updated upstream
       <workItem from="1570864937152" duration="13573000" />
-=======
       <workItem from="1570905925700" duration="3921000" />
->>>>>>> Stashed changes
     </task>
     <servers />
   </component>
