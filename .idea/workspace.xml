@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1fe12ff-1683-423a-b140-ca393be2a2e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/network_resources/chaincode/src/github.com/ctb/ca-blockchain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSchain-Adapter-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MSchain-Adapter-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chaincode/InvokeChaincode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chaincode/InvokeQueryChaincode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chaincode/InvokeQueryChaincode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/CAClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/CAClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/chaincode/InvokeChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chaincode/InvokeChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chaincode/InvokeQueryChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chaincode/InvokeQueryChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chaincode/QueryChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chaincode/QueryChaincode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/client/CAClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/CAClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/client/ChannelClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/ChannelClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/client/FabricClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/FabricClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/network/CreateChannel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/network/CreateChannel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/network/DeployInstantiateChaincode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/network/DeployInstantiateChaincode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/user/CAEnrollment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/user/CAEnrollment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/user/UserContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/user/UserContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Util.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,10 +109,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EnrollRegisterService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.EnrollRegisterService" />
+      <module name="MSchain-Adapter-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvokeChaincode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chaincode.InvokeChaincode" />
+      <module name="MSchain-Adapter-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chaincode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvokeQueryChaincode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chaincode.InvokeQueryChaincode" />
+      <module name="MSchain-Adapter-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chaincode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DeployInstantiateChaincode" />
+        <item itemvalue="Application.InvokeQueryChaincode" />
         <item itemvalue="Application.CreateChannel" />
+        <item itemvalue="Application.InvokeChaincode" />
+        <item itemvalue="Application.EnrollRegisterService" />
       </list>
     </recent_temporary>
   </component>
@@ -121,6 +173,7 @@
       <workItem from="1570773294657" duration="8854000" />
       <workItem from="1570864937152" duration="13573000" />
       <workItem from="1570905925700" duration="3921000" />
+      <workItem from="1572333343077" duration="9024000" />
     </task>
     <servers />
   </component>
@@ -262,6 +315,41 @@
           <url>file://$PROJECT_DIR$/src/main/java/network/CreateChannel.java</url>
           <line>55</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/network/DeployInstantiateChaincode.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/chaincode/InvokeQueryChaincode.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/chaincode/InvokeQueryChaincode.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

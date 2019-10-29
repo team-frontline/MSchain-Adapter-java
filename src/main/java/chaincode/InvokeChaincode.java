@@ -44,8 +44,10 @@ public class InvokeChaincode {
             channel.initialize();
 
             TransactionProposalRequest request = fabClient.getInstance().newTransactionProposalRequest();
-            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_1_NAME).build();
+            ChaincodeID ccid = ChaincodeID.newBuilder().setName(Config.CHAINCODE_NAME).build();
             request.setChaincodeID(ccid);
+
+
             /*request.setFcn("createCar");
             String[] arguments = { "CAR1", "Chevy", "Volt", "Red", "Nick" };
             request.setArgs(arguments);

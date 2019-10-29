@@ -87,5 +87,4 @@ public class CAClient {
     public String registerUser(String username, String organization) throws Exception { return null;}
 
     public UserContext enrollUser(UserContext user, String secret) throws Exception {return null;}
-
 }

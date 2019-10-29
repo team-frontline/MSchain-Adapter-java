@@ -1,3 +1,5 @@
 *.iml
 /target/
 /.idea/
+/src/network_resources/config/
+/src/network_resources/crypto-config/
