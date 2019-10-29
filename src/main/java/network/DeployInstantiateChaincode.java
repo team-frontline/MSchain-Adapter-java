@@ -1,5 +1,6 @@
 package network;
 
+import client.ChannelClient;
 import client.FabricClient;
 import config.Config;
 import org.hyperledger.fabric.sdk.*;
@@ -90,6 +91,16 @@ public class DeployInstantiateChaincode {
             }
 
             //instantiation should be done
+            ChannelClient channelClient = new ChannelClient(msChannel.getName(), msChannel, fabricClient);
+
+            String[] arguments = { "" };
+            responses = channelClient.instantiateChainCode(Config.CHAINCODE_NAME, Config.CHAINCODE_VERSION,
+                    Config.CHAINCODE_PATH, Type.GO_LANG.toString(), "init", arguments, null);
+
+            for (ProposalResponse res : responses) {
+                Logger.getLogger(DeployInstantiateChaincode.class.getName()).log(Level.INFO,
+                        Config.CHAINCODE_NAME + "- Chain code instantiation " + res.getStatus());
+            }
 
 
 
