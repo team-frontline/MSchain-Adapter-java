@@ -18,8 +18,11 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class InvokeChaincode {
 
-    public static void main(String args[]){
-        try{
+    private static final byte[] EXPECTED_EVENT_DATA = "!".getBytes(UTF_8);
+    private static final String EXPECTED_EVENT_NAME = "event";
+
+    public static void main(String args[]) {
+        try {
             Util.cleanUp();
             String caUrl = Config.CA_ORG1_URL;
             CAClient caClient = new CAClient(caUrl, null);
@@ -48,26 +51,37 @@ public class InvokeChaincode {
             request.setChaincodeID(ccid);
 
 
-            /*request.setFcn("createCar");
-            String[] arguments = { "CAR1", "Chevy", "Volt", "Red", "Nick" };
-            request.setArgs(arguments);
+            /*
+            Parameters for addCertificate
+            certString := args[0]
+            intermediateCertString := args[1]
+            sigString := args[2]
+            */
+            request.setFcn("addCertificate");
+
+            String[] chainCodeArgs = new String[3];
+            chainCodeArgs[0] = "certificate";
+            chainCodeArgs[1] = "CaCertificate";
+            chainCodeArgs[2] = "signature";
+            request.setArgs(chainCodeArgs);
             request.setProposalWaitTime(1000);
 
-            Map<String, byte[]> tm2 = new HashMap<>();
-            tm2.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
-            tm2.put("method", "TransactionProposalRequest".getBytes(UTF_8));
-            tm2.put("result", ":)".getBytes(UTF_8));
-            tm2.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
-            request.setTransientMap(tm2);
+            //Transient Map is required
+            Map<String, byte[]> transientMap = new HashMap<>();
+            transientMap.put("HyperLedgerFabric", "TransactionProposalRequest:JavaSDK".getBytes(UTF_8));
+            transientMap.put("method", "TransactionProposalRequest".getBytes(UTF_8));
+            transientMap.put("result", ":)".getBytes(UTF_8));
+            transientMap.put(EXPECTED_EVENT_NAME, EXPECTED_EVENT_DATA);
+            request.setTransientMap(transientMap);
+
             Collection<ProposalResponse> responses = channelClient.sendTransactionProposal(request);
-            for (ProposalResponse res: responses) {
+            for (ProposalResponse res : responses) {
                 ChaincodeResponse.Status status = res.getStatus();
-                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO,"Invoked createCar on "+Config.CHAINCODE_1_NAME + ". Status - " + status);
-            }*/
-
-
-        }catch (Exception e){
-
+                Logger.getLogger(InvokeChaincode.class.getName()).log(Level.INFO, "Invoked createCar on " +
+                        Config.CHAINCODE_NAME + ". Status - " + status);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
