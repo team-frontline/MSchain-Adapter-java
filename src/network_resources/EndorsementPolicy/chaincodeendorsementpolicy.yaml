@@ -1,0 +1,12 @@
+identities:  # list roles to be used in the policy
+  user1: {"role": {"name": "member", "mspId": "Org1MSP"}} # role member in org with mspid Org1MSP
+  user2: {"role": {"name": "member", "mspId": "Org2MSP"}}
+  admin1: {"role": {"name": "admin", "mspId": "Org1MSP"}} # admin role.
+  admin2: {"role": {"name": "admin", "mspId": "Org2MSP"}}
+
+policy:
+  - 2-of:
+      - signed-by: "user1"
+      - signed-by: "admin1"
+      - signed-by: "user2"
+      - signed-by: "admin2"
