@@ -67,4 +67,6 @@ public class Config {
 
     public static final String ORG1 = "org1";
 
+    public static final String ENORSEMENT_POLICY_PATH = BASE_PATH + File.separator + "endorsementPolicy" + File.separator + "chaincodeendorsementpolicy.yaml";
+
 }

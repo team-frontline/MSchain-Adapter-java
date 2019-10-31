@@ -30,8 +30,8 @@ public class FabricClient {
 
     public ChannelClient createChannelClient(String name) throws InvalidArgumentException {
         Channel channel = client.newChannel(name);
-//        ChannelClient client = new ChannelClient(name, channel, this);
-        return null;
+        ChannelClient channelClient = new ChannelClient(name, channel, this);
+        return channelClient;
     }
 
     public Collection<ProposalResponse> deployChaincode(String chaincodeName, String chaincodePath,

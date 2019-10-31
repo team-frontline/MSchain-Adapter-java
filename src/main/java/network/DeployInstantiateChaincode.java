@@ -95,16 +95,12 @@ public class DeployInstantiateChaincode {
 
             String[] arguments = { "" };
             responses = channelClient.instantiateChainCode(Config.CHAINCODE_NAME, Config.CHAINCODE_VERSION,
-                    Config.CHAINCODE_PATH, Type.GO_LANG.toString(), "init", arguments, null);
+                    Config.CHAINCODE_PATH, Type.GO_LANG.toString(), "init", arguments, Config.ENORSEMENT_POLICY_PATH);
 
             for (ProposalResponse res : responses) {
                 Logger.getLogger(DeployInstantiateChaincode.class.getName()).log(Level.INFO,
                         Config.CHAINCODE_NAME + "- Chain code instantiation " + res.getStatus());
             }
-
-
-
-
 
         } catch (Exception e) {
             e.printStackTrace();
