@@ -5,7 +5,9 @@ import user.UserContext;
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
@@ -103,5 +105,22 @@ public class Util {
 
         outputStream.close();
         file.close();
+    }
+
+    public static String readFileToString(Path filePath){
+        String readString = null;
+        try {
+            BufferedReader reader = Files.newBufferedReader(filePath, StandardCharsets.UTF_8);
+            StringBuilder sbPEM = new StringBuilder();
+            String currentLine;
+            while((currentLine = reader.readLine()) != null){
+                sbPEM.append(currentLine);
+            }
+            readString = sbPEM.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(readString);
+        return readString;
     }
 }

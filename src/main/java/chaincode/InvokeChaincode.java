@@ -8,6 +8,7 @@ import org.hyperledger.fabric.sdk.*;
 import user.UserContext;
 import util.Util;
 
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,9 +61,9 @@ public class InvokeChaincode {
             request.setFcn("addCertificate");
 
             String[] chainCodeArgs = new String[3];
-            chainCodeArgs[0] = "certificate";
-            chainCodeArgs[1] = "CaCertificate";
-            chainCodeArgs[2] = "signature";
+            chainCodeArgs[0] = Util.readFileToString(Paths.get(Config.TEST_MS_CERT_PATH));
+            chainCodeArgs[1] = Util.readFileToString(Paths.get(Config.TEST_CA_CERT_PATH));
+            chainCodeArgs[2] = Util.readFileToString(Paths.get(Config.TEST_MS_CERT_SIG_PATH));
             request.setArgs(chainCodeArgs);
             request.setProposalWaitTime(1000);
 

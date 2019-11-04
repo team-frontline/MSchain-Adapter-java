@@ -18,7 +18,7 @@ public class Config {
 
     public static final String ORDERER_NAME = "orderer.example.com";
 
-    public static final String CHANNEL_CONFIG_PATH = BASE_PATH + File.separator + "config/channel.tx";
+    public static final String CHANNEL_CONFIG_PATH = BASE_PATH + File.separator + "config"+File.separator + "channel.tx";
 
     public static final String CHANNEL_NAME = "mychannel";
 
@@ -37,6 +37,12 @@ public class Config {
     public static final String ORG2_PEER_1 = "peer1.org2.example.com";
 
     public static final String ORG2_PEER_1_URL = "grpc://localhost:8056";
+
+    public static final String TEST_MS_CERT_PATH = BASE_PATH + File.separator + "test"+ File.separator + "CRT.pem";
+
+    public static final String TEST_CA_CERT_PATH = BASE_PATH + File.separator + "test"+ File.separator + "CA.pem";
+
+    public static final String TEST_MS_CERT_SIG_PATH = BASE_PATH + File.separator + "test" + File.separator + "Sign";
 
 
     public static final String ORG1_ADMIN_PK_PATH = BASE_PATH + File.separator + "crypto-config" + File.separator + "peerOrganizations" + File.separator
